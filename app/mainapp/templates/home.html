@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block style %} 
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'mainapp/css/home.css' %}">
+{% endblock %}
+{% block body %}class="dark" data-spy="scroll" data-target=".navbar" data-offset="50"class="dark" data-spy="scroll" data-target=".navbar" data-offset="50"{% endblock %}
+{% block content %}
+	<br><br>
+	<div class="container">
+		<nav class="navbar navbar-expand-sm  navbar-dark ">
+			<a class="navbar-brand mx-auto" href="#DiscordOauth2"><span>Reloaded-GG Sync</span></a>
+			<!--
+			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<button id="mode" type="submit" class="btn btn-dark btn-lg ml-auto"><span class=""></span>LightMode</button>
+			</div>
+			-->
+		</nav> 
+	</div>
+	<div class="container" style="padding-top: 3vh;">
+		<div class="jumbotron">
+			<h1><strong id="DiscordOauth2">DiscordOauth2</strong></h1>
+			<div id="Discord">
+        Discord <a href="https://discord.com/developers/docs/topics/oauth2#oauth2" target="_blank">OAuth2 Documentation</a>
+				<div id="Auth">
+          <a href="{{auth_url}}" class="btn btn-lg shadow-none">Login with Discord</button>
+		    </div>	
+			</div>
+		</div>	
+	</div>
+{% endblock %}
+{% block js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'mainapp/bootstrap/js/bootstrap.min.js' %}"></script>
+<script>
+	$(document).ready(() =>{
+		$(".navbar-brand").click(function(){
+			$('html, body').animate({
+				scrollTop: $($(this).attr("href")).offset().top
+			}, 1000);
+		});
+	});
+</script>
+{% endblock %}
+</body>
+</html>
