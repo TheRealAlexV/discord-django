@@ -60,4 +60,4 @@ This method is for users who with to have more control over the python code that
 
 ## Accessing the App
 
-Visit `http://127.0.0.1:8000/home` if you're running this locally, or the URL of the server if you are running it remotely.
+Visit [http://127.0.0.1:8000/home](http://127.0.0.1:8000/home) if you're running this locally, or the URL of the server if you are running it remotely.
