@@ -27,7 +27,7 @@ Discord oauth credentials are needed next.
 
   `http://127.0.0.1:8000/auth`
 
-  ## NOTE:
+  ##### NOTE:
   If you want to run this project on a server or host, put your domain instead of 127.0.0.1:8000 and go to the `settings.py` file in the DiscordOauth2 folder and set `DEBUG` to `False` and put your domain in the ALLOWED_HOSTS list, e.g => `www.mydomain.com` or `mydomain.com`, then change `redirect_uri` to `http://yourdomain/auth`
     
 4. Then with the help of OAuth2 URL Generator In Oauth2, by selecting the url you added in Redirects in the SELECT REDIRECT URL section and checking `identify` and `guilds`, the  url generator will give you a url, copy it and paste it in .env file
