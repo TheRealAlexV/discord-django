@@ -3,18 +3,9 @@ version: '3.3'
 services:
   DiscordOauth:
     build:
-      context: ./SyncPortal
+      context: ./DiscordOauth
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8001:8000"
     env_file:
         - .env
-
-  # DiscordOauth:
-  #   build:
-  #     context: ./DiscordOauth
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "8001:8000"
-  #   env_file:
-  #       - .env
